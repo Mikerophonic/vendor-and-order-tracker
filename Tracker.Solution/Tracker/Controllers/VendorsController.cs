@@ -25,7 +25,7 @@ namespace Tracker.Controllers
       public ActionResult Create(string name, string address)
       {
         Vendor newVendor = new Vendor(name, address);
-        return View("Index", newVendor);
+        return RedirectToAction("Index");
       }
 
     }
