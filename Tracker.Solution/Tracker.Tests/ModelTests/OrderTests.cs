@@ -8,8 +8,6 @@ namespace Tracker.Tests
   [TestClass]
   public class OrderTests 
   {
-
-
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -20,14 +18,11 @@ namespace Tracker.Tests
     [TestMethod]
     public void GetTitle_ReturnsTitle_String()
     {
-      //Arrange
       string title = "Suzie's order";
 
-      //Act
       Order newOrder = new Order(title);
       string result = newOrder.Title;
 
-      //Assert
       Assert.AreEqual(title, result);
     }
 
