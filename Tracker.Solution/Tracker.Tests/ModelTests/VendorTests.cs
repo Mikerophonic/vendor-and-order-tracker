@@ -69,7 +69,7 @@ namespace Tracker.Tests
     }
 
     [TestMethod]
-  public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
       //Arrange
       string title = "Suzie's Order";
@@ -77,7 +77,7 @@ namespace Tracker.Tests
       List<Order> newList = new List<Order> { newOrder };
       string name = "Suzie's Cafe";
       Vendor newVendor = new Vendor(name, "address");
-      newVendor.AddItem(newOrder);
+      newVendor.AddOrder(newOrder);
 
       //Act
       List<Order> result = newVendor.Orders;

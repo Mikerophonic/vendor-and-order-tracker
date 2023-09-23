@@ -7,6 +7,7 @@ namespace Tracker.Models
     public string Name { get; set; }
     public string Address { get; set; }
     private static List<Vendor> _instances = new List<Vendor> { };
+    public List<Order> Orders { get; set; }
 
 
     public Vendor(string name, string address)
@@ -14,7 +15,7 @@ namespace Tracker.Models
         Name = name;
         Address = address;
         _instances.Add(this);
-
+        Orders = new List<Order>{};
     }
 
     public static List<Vendor> GetAll()
@@ -25,6 +26,11 @@ namespace Tracker.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public void AddOrder(Order order)
+    {
+        Orders.Add(order);
     }
   }
 }
