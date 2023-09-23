@@ -24,7 +24,7 @@ namespace Tracker.Tests
 
       //Act
       Vendor newVendor = new Vendor(name);
-      string result = newVendor.name;
+      string result = newVendor.Name;
 
       //Assert
       Assert.AreEqual(name, result);
