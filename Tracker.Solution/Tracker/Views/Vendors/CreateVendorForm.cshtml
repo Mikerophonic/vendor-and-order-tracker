@@ -10,9 +10,13 @@
       crossorigin="anonymous">
   </head>
   <body>
-  @using Tracker.Models;
-    <h1>Welcome, Pierre</h1>
-
-    <a href="/vendors/new">Add a new vendor.</a>
+  <h2>Add a new vendor</h2>
+    <form action="/vendors" method="post">
+      <label for="name">Name: </label>
+      <input id="name" name="name" type="text">
+      <label for="name">Address: </label>
+      <input id="address" name="address" type="text">
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>

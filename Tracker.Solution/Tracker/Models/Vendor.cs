@@ -6,6 +6,7 @@ namespace Tracker.Models
   {
     public string Name { get; set; }
     public string Address { get; set; }
+    public int Id { get; }
     private static List<Vendor> _instances = new List<Vendor> { };
     public List<Order> Orders { get; set; }
 
@@ -15,6 +16,7 @@ namespace Tracker.Models
         Name = name;
         Address = address;
         _instances.Add(this);
+        Id = _instances.Count;
         Orders = new List<Order>{};
     }
 

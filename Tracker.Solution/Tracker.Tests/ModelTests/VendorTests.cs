@@ -71,7 +71,6 @@ namespace Tracker.Tests
     [TestMethod]
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
-      //Arrange
       string title = "Suzie's Order";
       Order newOrder = new Order(title);
       List<Order> newList = new List<Order> { newOrder };
@@ -79,10 +78,8 @@ namespace Tracker.Tests
       Vendor newVendor = new Vendor(name, "address");
       newVendor.AddOrder(newOrder);
 
-      //Act
       List<Order> result = newVendor.Orders;
 
-      //Assert
       CollectionAssert.AreEqual(newList, result);
     }
 
