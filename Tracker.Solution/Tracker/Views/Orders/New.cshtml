@@ -12,11 +12,17 @@
   <body>
     @using Tracker.Models;
 
-    <h1>Add a new item to @Model.Name</h1>
+    <h1>Add a new order to @Model.Name</h1>
 
-    <form action="/vendors/@Model.Id/order" method="post">
-      <label for="title">Add a new order</label>
-      <input id="title" name="title" type="text">
+    <form action="/vendors/@Model.Id/orders" method="post">
+      <label for="title">Title</label>
+      <input id="title" name="orderTitle" type="text"><br>
+      <label for="description">Description:</label>
+      <input id="description" name="description" type="text"><br>
+      <label for="title">Price</label>
+      <input id="price" name="price" type="number"><br>
+      <label for="date">Date</label>
+      <input id="date" name="date" type="date"><br>
       <button type="submit">Submit</button>
     </form>
   </body>
